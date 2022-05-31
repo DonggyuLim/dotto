@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QueryMsg",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "config"
+      ],
+      "properties": {
+        "config": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "balance"
+      ],
+      "properties": {
+        "balance": {
+          "type": "object",
+          "required": [
+            "lottery_id"
+          ],
+          "properties": {
+            "lottery_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "combination"
+      ],
+      "properties": {
+        "combination": {
+          "type": "object",
+          "required": [
+            "address",
+            "lottery_id"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            },
+            "lottery_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "winner"
+      ],
+      "properties": {
+        "winner": {
+          "type": "object",
+          "required": [
+            "lottery_id"
+          ],
+          "properties": {
+            "lottery_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "get_jackpot"
+      ],
+      "properties": {
+        "get_jackpot": {
+          "type": "object",
+          "required": [
+            "lottery_id"
+          ],
+          "properties": {
+            "lottery_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "count_ticket"
+      ],
+      "properties": {
+        "count_ticket": {
+          "type": "object",
+          "required": [
+            "lottery_id"
+          ],
+          "properties": {
+            "lottery_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "count_user"
+      ],
+      "properties": {
+        "count_user": {
+          "type": "object",
+          "required": [
+            "lottery_id"
+          ],
+          "properties": {
+            "lottery_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "jackpot_balance"
+      ],
+      "properties": {
+        "jackpot_balance": {
+          "type": "object",
+          "required": [
+            "lottery_id"
+          ],
+          "properties": {
+            "lottery_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "jackpot_count"
+      ],
+      "properties": {
+        "jackpot_count": {
+          "type": "object",
+          "required": [
+            "lottery_id"
+          ],
+          "properties": {
+            "lottery_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

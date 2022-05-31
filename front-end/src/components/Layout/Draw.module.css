@@ -1,0 +1,17 @@
+.container {
+  background-color: #fef4ad;
+  animation: change-background 3s infinite linear;
+}
+
+@keyframes change-background {
+  0%,
+  59%,
+  98%,
+  100% {
+    background: #fef4ad;
+  }
+  61%,
+  97% {
+    background: #f8ae39;
+  }
+}

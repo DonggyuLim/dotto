@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExecuteMsg",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "register"
+      ],
+      "properties": {
+        "register": {
+          "type": "object",
+          "required": [
+            "combination"
+          ],
+          "properties": {
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "combination": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "draw"
+      ],
+      "properties": {
+        "draw": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "collect_counter"
+      ],
+      "properties": {
+        "collect_counter": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "collect_balance"
+      ],
+      "properties": {
+        "collect_balance": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "claim"
+      ],
+      "properties": {
+        "claim": {
+          "type": "object",
+          "required": [
+            "lottery_id"
+          ],
+          "properties": {
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "lottery_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "safe_lock"
+      ],
+      "properties": {
+        "safe_lock": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "seed_generation"
+      ],
+      "properties": {
+        "seed_generation": {
+          "type": "object",
+          "required": [
+            "seed"
+          ],
+          "properties": {
+            "seed": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

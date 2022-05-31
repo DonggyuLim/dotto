@@ -1,0 +1,75 @@
+{
+  "name": "dotto",
+  "developer": {
+    "archwayd": {
+      "docker": true
+    },
+    "scripts": {
+      "test": "cargo unit-test",
+      "build": "cargo build",
+      "optimize": "cargo run-script optimize",
+      "wasm": "cargo wasm",
+      "query": "archwayd query wasm",
+      "tx": "archwayd tx wasm execute"
+    },
+    "deployments": [
+      {
+        "type": "instantiate",
+        "chainId": "constantine-1",
+        "codeId": 261,
+        "address": "archway1tv6devt5lwq5ggylc8c3k9gnmnq0s9s3t4ctx05a0qtv6ne4a7xslzjqdh",
+        "admin": "archway1uwh42m8acry6uw08ghldqacfwsy2wfgetp6urc"
+      },
+      {
+        "type": "create",
+        "chainId": "constantine-1",
+        "codeId": 261
+      },
+      {
+        "type": "create",
+        "chainId": "constantine-1",
+        "codeId": 260
+      },
+      {
+        "type": "instantiate",
+        "chainId": "torii-1",
+        "codeId": 49302,
+        "address": "archway1heu9qp9zd69fpzu7ntzvjwvuejpl2vge3pvl8zet40hzmfaetycsyqc23e",
+        "admin": "archway19wvjy3eldsuryjtjj7gf82kv3hgj552ywnf6la"
+      },
+      {
+        "type": "create",
+        "chainId": "torii-1",
+        "codeId": 49302
+      }
+    ]
+  },
+  "network": {
+    "name": "constantine",
+    "chainId": "constantine-1",
+    "type": "testnet",
+    "fees": {
+      "feeDenom": "uconst"
+    },
+    "gas": {
+      "prices": "0.002uconst",
+      "mode": "auto",
+      "adjustment": "1.3"
+    },
+    "wasm": {
+      "bech32Hrp": "archway",
+      "archwayd": "0.0.4",
+      "configDir": ".archway",
+      "binary": "archwayd"
+    },
+    "urls": {
+      "rpc": {
+        "url": "https://rpc.constantine-1.archway.tech",
+        "port": 443
+      },
+      "faucets": [
+        "https://faucet.torii-1.archway.tech"
+      ]
+    }
+  }
+}

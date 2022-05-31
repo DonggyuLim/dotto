@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply text-white border-white  hover:border-white disabled:bg-gray-300 disabled:text-slate-400 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply py-2 px-4 bg-[#66C1BD] text-white font-semibold rounded-lg shadow-md hover:bg-[#2b9d97] hover:font-[#2b9d97] focus:outline-none focus:ring-2 focus:bg-[#2b9d97] focus:ring-opacity-75;
+  }
+  .btn-secondary {
+    @apply py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-[#ffffff9d] rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-500 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700;
+  }
+  .btn-payment {
+    @apply text-xl text-gray-900 bg-[#ffffff84] hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
